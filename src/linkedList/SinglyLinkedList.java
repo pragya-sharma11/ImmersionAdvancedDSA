@@ -17,8 +17,10 @@ public class SinglyLinkedList {
     public static void traversal(ListNode head){
         ListNode current = head;
         while (current!=null){
-            System.out.println(current.getData()+"-->");
+            System.out.print(current.getData()+"-->");
+            current = current.getNext();
         }
+        System.out.println("null");
     }
 }
 
@@ -36,6 +38,10 @@ class ListNode{
 
     public void setNext(ListNode next) {
         this.next = next;
+    }
+
+    public ListNode getNext() {
+        return next;
     }
 
     public int getData() {
