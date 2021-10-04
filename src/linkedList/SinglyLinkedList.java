@@ -1,6 +1,7 @@
 package linkedList;
 
 public class SinglyLinkedList {
+    private ListNode head  = new ListNode(10);
 
 }
 
