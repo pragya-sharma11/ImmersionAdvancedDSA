@@ -4,6 +4,7 @@ import java.awt.*;
 
 public class SinglyLinkedList {
     private ListNode head;
+
     public static void main(String[] args) {
         SinglyLinkedList sll = new SinglyLinkedList();
         sll.head = new ListNode(10);
@@ -15,17 +16,18 @@ public class SinglyLinkedList {
         third.setNext(fourth);
         printTraversal(sll.head);
     }
-    public static void printTraversal(ListNode head){
+
+    public static void printTraversal(ListNode head) {
         ListNode current = head;
-        while (current!=null){
-            System.out.print(current.getData()+"-->");
+        while (current != null) {
+            System.out.print(current.getData() + "-->");
             current = current.getNext();
         }
         System.out.println("null");
     }
 }
 
-class ListNode{
+class ListNode {
     private int data;
     private ListNode next;
 
@@ -37,12 +39,12 @@ class ListNode{
         this.next = next;
     }
 
-    public void setNext(ListNode next) {
-        this.next = next;
-    }
-
     public ListNode getNext() {
         return next;
+    }
+
+    public void setNext(ListNode next) {
+        this.next = next;
     }
 
     public int getData() {
