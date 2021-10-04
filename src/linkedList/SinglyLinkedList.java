@@ -10,7 +10,15 @@ public class SinglyLinkedList {
         ListNode second = new ListNode(20);
         ListNode third = new ListNode(30);
         ListNode fourth = new ListNode(40);
-
+        sll.head.setNext(second);
+        second.setNext(third);
+        third.setNext(fourth);
+    }
+    public static void traversal(ListNode head){
+        ListNode current = head;
+        while (current!=null){
+            System.out.println(current.getData()+"-->");
+        }
     }
 }
 
@@ -28,5 +36,9 @@ class ListNode{
 
     public void setNext(ListNode next) {
         this.next = next;
+    }
+
+    public int getData() {
+        return data;
     }
 }
