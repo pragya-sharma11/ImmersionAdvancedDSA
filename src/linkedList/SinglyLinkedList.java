@@ -2,7 +2,10 @@ package linkedList;
 
 public class SinglyLinkedList {
     private ListNode head  = new ListNode(10);
-
+    private ListNode second  = new ListNode(10);
+    private ListNode third  = new ListNode(10);
+    private ListNode fouth  = new ListNode(10);
+    head.
 }
 
 class ListNode{
@@ -14,6 +17,10 @@ class ListNode{
     }
 
     public ListNode(ListNode next) {
+        this.next = next;
+    }
+
+    public void setNext(ListNode next) {
         this.next = next;
     }
 }
