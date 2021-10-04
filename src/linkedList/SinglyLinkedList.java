@@ -5,7 +5,10 @@ public class SinglyLinkedList {
     private ListNode second  = new ListNode(10);
     private ListNode third  = new ListNode(10);
     private ListNode fouth  = new ListNode(10);
-    head.
+
+    public static void main(String[] args) {
+
+    }
 }
 
 class ListNode{
