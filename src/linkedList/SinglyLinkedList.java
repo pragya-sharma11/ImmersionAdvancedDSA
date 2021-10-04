@@ -13,8 +13,9 @@ public class SinglyLinkedList {
         sll.head.setNext(second);
         second.setNext(third);
         third.setNext(fourth);
+        printTraversal(sll.head);
     }
-    public static void traversal(ListNode head){
+    public static void printTraversal(ListNode head){
         ListNode current = head;
         while (current!=null){
             System.out.print(current.getData()+"-->");
