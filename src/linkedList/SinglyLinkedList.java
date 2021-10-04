@@ -1,12 +1,11 @@
 package linkedList;
 
-public class SinglyLinkedList {
-    private ListNode head  = new ListNode(10);
-    private ListNode second  = new ListNode(10);
-    private ListNode third  = new ListNode(10);
-    private ListNode fouth  = new ListNode(10);
+import java.awt.*;
 
+public class SinglyLinkedList {
+    private ListNode head;
     public static void main(String[] args) {
+        SinglyLinkedList sll = new SinglyLinkedList();
 
     }
 }
