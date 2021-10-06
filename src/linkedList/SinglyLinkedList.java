@@ -15,7 +15,7 @@ public class SinglyLinkedList {
         second.setNext(third);
         third.setNext(fourth);
         printTraversal(sll.head);
-        tellLength(sll.head);
+        System.out.println("Length is "+tellLength(sll.head));
     }
 
     public static void printTraversal(ListNode head) {
