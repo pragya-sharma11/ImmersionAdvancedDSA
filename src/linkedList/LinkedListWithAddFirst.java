@@ -1,7 +1,5 @@
 package linkedList;
 
-import java.util.Scanner;
-
 public class LinkedListWithAddFirst {
     static ListNode head;
     static class ListNode {
@@ -36,16 +34,19 @@ public class LinkedListWithAddFirst {
 
     public static void main(String[] args) {
         LinkedListWithAddFirst ll = new LinkedListWithAddFirst();
-        head = new ListNode(90);
         addFirst(56, head);
         addLast(89, head);
         addLast(45, head);
+        addFirst(82,head);
     }
-    public static ListNode addFirst(int n, ListNode head){
+    public static void addFirst(int n, ListNode head){
         ListNode node = new ListNode(n);
+        if(head == null){
+            head = node;
+            return;
+        }
         node.setNext(head);
         head = node;
-        return head;
     }
     public static void addLast(int n, ListNode head){
         ListNode newNode = new ListNode(n);
