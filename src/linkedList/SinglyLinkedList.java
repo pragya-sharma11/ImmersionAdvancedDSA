@@ -16,6 +16,13 @@ public class SinglyLinkedList {
         third.setNext(fourth);
         printTraversal(sll.head);
         System.out.println("Length is "+tellLength(sll.head));
+        ListNode newNode = new ListNode(89);
+        sll.head = addFirst(newNode, sll.head);
+    }
+    public static ListNode addFirst(ListNode newNode, ListNode head){
+        newNode.setNext(head);
+        head = newNode;
+        return head;
     }
 
     public static void printTraversal(ListNode head) {
