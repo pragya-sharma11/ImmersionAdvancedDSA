@@ -76,6 +76,20 @@ public class LinkedListWithAddFirst {
         dltNode.setNext(null);
         return dltNode;
     }
+
+    public static ListNode removeLast(){
+        if(head == null){
+            return head;
+        }
+        ListNode curr = head;
+        while(curr.next.next!=null){
+            curr = curr.next;
+        }
+        ListNode dlt = curr.next;
+        curr.next = null;
+        return dlt;
+    }
+
     public static void printTraversal(ListNode head) {
         ListNode current = head;
         while (current != null) {
