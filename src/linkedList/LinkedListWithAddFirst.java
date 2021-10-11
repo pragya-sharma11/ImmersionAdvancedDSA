@@ -2,6 +2,7 @@ package linkedList;
 
 public class LinkedListWithAddFirst {
     static ListNode head;
+    static int size=0;
     static class ListNode {
         private int data;
         private ListNode next;
@@ -48,9 +49,13 @@ public class LinkedListWithAddFirst {
         removeLastBySir();
         System.out.println("List after calling removeLastBySir()");
         printTraversal();
+        System.out.println("List after calling addAnywhere()");
+        addAnywhere(112,45);
+        printTraversal();
     }
     public static void addFirst(int n){
         ListNode node = new ListNode(n);
+        size++;
         if(head == null){
             head = node;
             return ;
@@ -60,6 +65,7 @@ public class LinkedListWithAddFirst {
 
     }
     public static void addLast(int n){
+        size++;
         ListNode newNode = new ListNode(n);
         if(head==null){
             head = newNode;
@@ -72,10 +78,32 @@ public class LinkedListWithAddFirst {
         cur.next = newNode;
     }
 
+    public static void addAnywhere(int data, int position){
+        if(position<1 || position>size){
+            System.out.println("Invalid Position please enter a position between 1 to "+size);
+            return;
+        }
+        size++;
+        if(position==1) {
+            addFirst(data);
+            return;
+        }
+        ListNode node = new ListNode(data);
+        ListNode current = head;
+        int count =1;
+        while(count<position-1){
+            count++;
+            current = current.next;
+        }
+        node.next = current.next;
+        current.next = node;
+    }
+
     public static ListNode removeFirst(){
         if(head==null){
             return null;
         }
+        size--;
         ListNode dltNode = head;
         head = head.getNext();
         dltNode.setNext(null);
@@ -84,8 +112,10 @@ public class LinkedListWithAddFirst {
 
     public static ListNode removeLastBySir() {
         if(head == null || head.next == null){
+            size=0;
             return head;
         }
+        size--;
         ListNode current = head;
         ListNode previous = null;
         while(current.next!=null){
