@@ -35,16 +35,18 @@ public class LinkedListWithAddFirst {
     public static void main(String[] args) {
         LinkedListWithAddFirst ll = new LinkedListWithAddFirst();
         addFirst(56);
-        System.out.println(head.data);
         addLast(89);
         addLast(45);
         addFirst(82);
         addLast(73);
         addLast(56);
+        System.out.println("List after adding the nodes.");
         printTraversal();
         removeFirst();
+        System.out.println("List after calling removeFirst()");
         printTraversal();
         removeLastBySir();
+        System.out.println("List after calling removeLastBySir()");
         printTraversal();
     }
     public static void addFirst(int n){
