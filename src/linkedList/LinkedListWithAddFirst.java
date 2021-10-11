@@ -36,13 +36,16 @@ public class LinkedListWithAddFirst {
         LinkedListWithAddFirst ll = new LinkedListWithAddFirst();
         addFirst(56);
         System.out.println(head.data);
-        addLast(89, head);
-        addLast(45, head);
+        addLast(89);
+        addLast(45);
         addFirst(82);
-        addLast(73,head);
-        printTraversal(head);
+        addLast(73);
+        addLast(56);
+        printTraversal();
         removeFirst();
-        printTraversal(head);
+        printTraversal();
+        removeLastBySir();
+        printTraversal();
     }
     public static void addFirst(int n){
         ListNode node = new ListNode(n);
@@ -54,7 +57,7 @@ public class LinkedListWithAddFirst {
         head = node;
 
     }
-    public static void addLast(int n, ListNode head){
+    public static void addLast(int n){
         ListNode newNode = new ListNode(n);
         if(head==null){
             head = newNode;
@@ -103,7 +106,7 @@ public class LinkedListWithAddFirst {
         return dlt;
     }
 
-    public static void printTraversal(ListNode head) {
+    public static void printTraversal() {
         ListNode current = head;
         while (current != null) {
             System.out.print(current.getData() + "-->");
