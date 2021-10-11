@@ -77,8 +77,21 @@ public class LinkedListWithAddFirst {
         return dltNode;
     }
 
-    public static ListNode removeLast(){
-        if(head == null){
+    public static ListNode removeLastBySir() {
+        if(head == null || head.next == null){
+            return head;
+        }
+        ListNode current = head;
+        ListNode previous = null;
+        while(current.next!=null){
+            previous = current;
+            current = current.next;
+        }
+        previous.next = null;
+        return current;
+    }
+    public static ListNode myRemoveLast(){
+        if(head == null || head.next==null ){
             return head;
         }
         ListNode curr = head;
