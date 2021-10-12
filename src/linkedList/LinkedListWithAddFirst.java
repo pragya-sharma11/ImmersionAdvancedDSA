@@ -30,6 +30,7 @@ public class LinkedListWithAddFirst {
         printTraversal();
     }
 
+    //add methods.
     public static void addFirst(int n) {
         ListNode node = new ListNode(n);
         size++;
@@ -77,6 +78,7 @@ public class LinkedListWithAddFirst {
         current.next = node;
     }
 
+    //remove methods.
     public static ListNode removeFirst() {
         if (head == null) {
             return null;
@@ -136,6 +138,7 @@ public class LinkedListWithAddFirst {
         return dlt;
     }
 
+    //print method to print the linked list.
     public static void printTraversal() {
         ListNode current = head;
         while (current != null) {
@@ -145,6 +148,7 @@ public class LinkedListWithAddFirst {
         System.out.println("null");
     }
 
+    //ListNode class to make nodes for linked list.
     static class ListNode {
         private int data;
         private ListNode next;
