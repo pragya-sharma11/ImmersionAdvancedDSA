@@ -12,6 +12,6 @@ public class MainClassForDLL {
         dll.addLast(90);
         dll.addLast(90);
         System.out.println();
-        dll.displayF();
+        dll.displayForward();
     }
 }
