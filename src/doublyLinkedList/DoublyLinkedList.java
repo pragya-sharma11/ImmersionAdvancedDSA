@@ -13,6 +13,8 @@ public class DoublyLinkedList {
     public boolean isEmpty(){
         return size==0; //head == null;
     }
+
+    //addfirst
     public void addFirst(int data){
         ListNode newNode = new ListNode(data);
         if(isEmpty()){  //we can do (head==null) but we need to show the usage of isEmpty.
@@ -25,6 +27,19 @@ public class DoublyLinkedList {
         }
         newNode.next = head;
         head = newNode;
+        size++;
+    }
+
+    //addLast
+    public void addLast(int data){
+        ListNode newNode = new ListNode(data);
+        if(isEmpty()){
+            head = newNode;
+        } else {
+            tail.next = newNode;
+            newNode.previous = tail;
+        }
+        tail = newNode;
         size++;
     }
     class ListNode{

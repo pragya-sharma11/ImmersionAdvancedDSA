@@ -6,5 +6,6 @@ public class MainClassForDLL {
         dll.addFirst(56);
         dll.addFirst(76);
         dll.addFirst(34);
+        //dll.displayForward()
     }
 }
