@@ -59,9 +59,27 @@ public class DoublyLinkedList {
             head = head.next;
             head.previous = null;
         }
+        size--;
         return dltData;
     }
-
+    //before if -> temp=head;
+    //head.next.prev = null ---else
+    //after else-> head = head.next;temp.next = null;length--;
+    public int removeLast(){
+        int dltData = 0;
+        if(isEmpty()){
+            throw  new NoSuchElementException("The Doubly linked list is empty");
+        }else if(size==1){
+            dltData = head.data;
+            head = tail = null;
+        } else {
+            dltData = tail.data;
+            tail = tail.previous;
+            tail.next = null;
+        }
+        size--;
+        return dltData;
+    }
 
 
     //print in forward direction
