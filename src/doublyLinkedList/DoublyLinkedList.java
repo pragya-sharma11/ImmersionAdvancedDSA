@@ -42,6 +42,15 @@ public class DoublyLinkedList {
         tail = newNode;
         size++;
     }
+
+    //print
+    public void displayForward(){
+        ListNode curr = head;
+        while(curr!=null){
+            System.out.print(curr.data + "  ");
+            curr = curr.next;
+        }
+    }
     class ListNode{
         int data;
         ListNode previous, next;

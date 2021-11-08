@@ -7,5 +7,11 @@ public class MainClassForDLL {
         dll.addFirst(76);
         dll.addFirst(34);
         //dll.displayForward()
+        dll.displayForward();
+        dll.addLast(90);
+        dll.addLast(90);
+        dll.addLast(90);
+        System.out.println();
+        dll.displayF();
     }
 }
