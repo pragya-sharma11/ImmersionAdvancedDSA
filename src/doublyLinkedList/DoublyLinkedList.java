@@ -1,5 +1,7 @@
 package doublyLinkedList;
 
+import java.util.NoSuchElementException;
+
 public class DoublyLinkedList {
     private ListNode head, tail;
     //head and tail are the reference variable pointing to the start and
@@ -43,7 +45,26 @@ public class DoublyLinkedList {
         size++;
     }
 
-    //print
+
+    //remove
+    public int removeFirst(){
+        int dltData = 0;
+        if(isEmpty()){
+            throw  new NoSuchElementException("The Doubly linked list is empty");
+        }else if(size==1){
+            dltData = head.data;
+            head = tail = null;
+        } else {
+            dltData = head.data;
+            head = head.next;
+            head.previous = null;
+        }
+        return dltData;
+    }
+
+
+
+    //print in forward direction
     public void displayForward(){
         ListNode curr = head;
         while(curr!=null){
@@ -51,6 +72,8 @@ public class DoublyLinkedList {
             curr = curr.next;
         }
     }
+
+    //print in backward direction
     public void displayBackward(){
         ListNode curr = tail;
         while (curr!=null){
