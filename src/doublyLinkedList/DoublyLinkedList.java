@@ -1,6 +1,10 @@
 package doublyLinkedList;
 
 public class DoublyLinkedList {
+    private ListNode head, tail;
+    //head and tail are the reference variable pointing to the start and
+    //end of DoublyLinkedList
+    private int size;
 
     class ListNode{
         int data;
