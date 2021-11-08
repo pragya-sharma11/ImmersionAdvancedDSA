@@ -16,12 +16,15 @@ public class DoublyLinkedList {
     public void addFirst(int data){
         ListNode newNode = new ListNode(data);
         if(isEmpty()){  //we can do (head==null) but we need to show the usage of isEmpty.
-            tail = head = newNode;
+//            tail = head = newNode;
+            tail = newNode;
         }else {
             head.previous = newNode;
-            newNode.next = head;
-            head = newNode;
+//            newNode.next = head;
+//            head = newNode;
         }
+        newNode.next = head;
+        head = newNode;
         size++;
     }
     class ListNode{
