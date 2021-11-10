@@ -10,5 +10,8 @@ public class CircularLinkedListMainClass {
         cll.addLast(75);
         cll.addLast(65);
         cll.displayList();
+        cll.removeFirst();
+        cll.removeFirst();
+        cll.displayList();
     }
 }
