@@ -36,8 +36,8 @@ public class CircularLinkedList {
             last = newNode;
             last.next = last;
         }else{
-            last.next = newNode;
             newNode.next = last.next;
+            last.next = newNode;
             last = newNode;
         }
         size++;

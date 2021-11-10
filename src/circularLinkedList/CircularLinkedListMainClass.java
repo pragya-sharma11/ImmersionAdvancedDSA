@@ -6,6 +6,9 @@ public class CircularLinkedListMainClass {
         cll.addFirst(45);
         cll.addFirst(78);
         cll.addFirst(37);
+        cll.addLast(85);
+        cll.addLast(75);
+        cll.addLast(65);
         cll.displayList();
     }
 }
