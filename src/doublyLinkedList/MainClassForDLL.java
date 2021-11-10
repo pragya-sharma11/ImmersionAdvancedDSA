@@ -11,8 +11,13 @@ public class MainClassForDLL {
         dll.addLast(90);
         dll.addLast(90);
         System.out.println();
-        System.out.println();
         dll.displayForward();
-
+        System.out.println();
+        System.out.println(dll.removeLast());
+        System.out.println(dll.removeLast());
+        System.out.println(dll.removeLast());
+        System.out.println(dll.removeLast());
+        System.out.println(dll.removeLast());
+        System.out.println(dll.removeLast());
     }
 }
