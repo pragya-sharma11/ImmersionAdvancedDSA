@@ -5,9 +5,9 @@ public class CircularLinkedList {
     int size;
     public  void createLinkedList(){
         ListNode first = new ListNode(56);
-        ListNode second = new ListNode(56);
-        ListNode third = new ListNode(56);
-        ListNode fourth = new ListNode(56);
+        ListNode second = new ListNode(45);
+        ListNode third = new ListNode(78);
+        ListNode fourth = new ListNode(1568);
         size = 4;
         first.next = second;
         second.next = third;
@@ -23,6 +23,7 @@ public class CircularLinkedList {
         ListNode first = last.next;
         while (first!=last){
             System.out.print(first.data + " -> ");
+            first = first.next;
         }
     }
     class ListNode{
