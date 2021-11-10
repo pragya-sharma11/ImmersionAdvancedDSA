@@ -1,5 +1,7 @@
 package circularLinkedList;
 
+import java.util.NoSuchElementException;
+
 public class CircularLinkedList {
     ListNode last;
     int size;
@@ -42,6 +44,25 @@ public class CircularLinkedList {
         }
         size++;
     }
+
+
+    //remove method
+    public int removeFirst(){
+        if(isEmpty()){
+            throw new NoSuchElementException("List is Empty");
+        }
+        ListNode temp = last.next;
+        if(last.next == last){
+            last = null;
+        }else {
+            last.next = last.next.next;
+        }
+        temp.next = null;
+        size--;
+        return temp.data;
+    }
+
+
 
     //display method
     public void displayList() {
