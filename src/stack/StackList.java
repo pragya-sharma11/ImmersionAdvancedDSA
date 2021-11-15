@@ -23,6 +23,13 @@ public class StackList {
         length--;
         return deletedData;
     }
+    public int peek(){
+        if(top == null){
+            throw new NoSuchElementException("Stack is empty");
+        }
+        return top.data;
+    }
+
     class ListNode {
         int data;
         ListNode next;
