@@ -7,9 +7,11 @@ public class StackMain {
         sl.push(34);
         sl.push(87);
         sl.push(98);
-
-        System.out.println(sl.pop());
-        System.out.println(sl.pop());
-        System.out.println(sl.peek());
+        System.out.println("stack is");
+        sl.display();
+        System.out.println();
+        System.out.println("pop->"+sl.pop());
+        System.out.println("pop->"+sl.pop());
+        System.out.println("peek->"+sl.peek());
     }
 }

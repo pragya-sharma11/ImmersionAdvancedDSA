@@ -29,6 +29,13 @@ public class StackList {
         }
         return top.data;
     }
+    public void display(){
+        ListNode curr = top;
+        while(curr!=null){
+            System.out.print(curr.data+" -> ");
+            curr= curr.next;
+        }
+    }
     public boolean isEmpty(){
         return top == null;
     }
