@@ -7,7 +7,7 @@ public class StackList {
     private int length;
     public void push(int data){
         length++;
-        if(top == null){
+        if(isEmpty()){
             top = new ListNode(data);
         }
         ListNode newNode = new ListNode(data);
@@ -15,7 +15,7 @@ public class StackList {
         top = newNode;
     }
     public int pop(){
-        if(top==null){
+        if(isEmpty()){
             throw new NoSuchElementException("Stack is empty!!");
         }
         int deletedData = top.data;
@@ -24,12 +24,14 @@ public class StackList {
         return deletedData;
     }
     public int peek(){
-        if(top == null){
+        if(isEmpty()){
             throw new NoSuchElementException("Stack is empty");
         }
         return top.data;
     }
-
+    public boolean isEmpty(){
+        return top == null;
+    }
     class ListNode {
         int data;
         ListNode next;
