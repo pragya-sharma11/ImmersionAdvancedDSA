@@ -12,6 +12,7 @@ public class StackList {
 
         public ListNode(int data) {
             this.data = data;
+            this.next = null;
         }
     }
 }
