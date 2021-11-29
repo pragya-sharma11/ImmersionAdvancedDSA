@@ -1,8 +1,10 @@
 package tree;
 
 public class BinaryTreeImplementation {
+    private TreeNode root;
+
     class TreeNode{
-        private int data;
+        private int data; //can be generic type.
         private TreeNode left;
         private TreeNode right;
 
