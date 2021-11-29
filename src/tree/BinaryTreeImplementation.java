@@ -3,6 +3,23 @@ package tree;
 public class BinaryTreeImplementation {
     private TreeNode root;
 
+    public void createBinaryTree(){
+        TreeNode first = new TreeNode(5);
+        TreeNode second = new TreeNode(6);
+        TreeNode third= new TreeNode(7);
+        TreeNode fourth = new TreeNode(8);
+        TreeNode fifth = new TreeNode(9);
+        TreeNode sixth = new TreeNode(10);
+        TreeNode seventh = new TreeNode(11);
+        root = first;
+        first.left = second;
+        first.right = third;
+        second.left = fourth;
+        second.right = fifth;
+        third.left = sixth;
+        third.right = seventh;
+    }
+
     class TreeNode{
         private int data; //can be generic type.
         private TreeNode left;
