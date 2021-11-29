@@ -34,6 +34,9 @@ public class BinaryTreeImplementation {
             return;
         }
         System.out.println(root.data+ "  ");
+
+        //if a recursion is called more than once in that function,
+        // it is called tree recursion.
         preOrder(root.left);
         preOrder(root.right);
     }
