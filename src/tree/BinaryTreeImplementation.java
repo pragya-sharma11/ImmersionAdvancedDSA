@@ -1,5 +1,7 @@
 package tree;
 
+import com.sun.source.tree.Tree;
+
 public class BinaryTreeImplementation {
     private TreeNode root;
 
@@ -20,6 +22,21 @@ public class BinaryTreeImplementation {
         third.right = seventh;
     }
 
+    //traversal
+
+    //preOrder Traversal
+    public void preOrder(){
+        TreeNode curr = root;
+        preOrder(curr);
+    }
+    public void preOrder(TreeNode root){
+        if(root == null){     //base case
+            return;
+        }
+        System.out.println(root.data+ "  ");
+        preOrder(root.left);
+        preOrder(root.right);
+    }
     class TreeNode{
         private int data; //can be generic type.
         private TreeNode left;
