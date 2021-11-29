@@ -1,7 +1,5 @@
 package tree;
 
-import com.sun.source.tree.Tree;
-
 public class BinaryTreeImplementation {
     private TreeNode root;
 
