@@ -40,6 +40,14 @@ public class BinaryTreeImplementation {
         preOrder(root.left);
         preOrder(root.right);
     }
+
+    /**
+     * output:-
+     *                    call stack
+     * method call            line number           root
+     * preOrder()                40                   5
+     *
+     */
     class TreeNode{
         private int data; //can be generic type.
         private TreeNode left;
