@@ -3,10 +3,10 @@ package tree;
 public class BinaryTreeImplementation {
     private TreeNode root;
 
-    public void createBinaryTree(){
+    public void createBinaryTree() {
         TreeNode first = new TreeNode(5);
         TreeNode second = new TreeNode(6);
-        TreeNode third= new TreeNode(7);
+        TreeNode third = new TreeNode(7);
         TreeNode fourth = new TreeNode(8);
         TreeNode fifth = new TreeNode(9);
         TreeNode sixth = new TreeNode(10);
@@ -23,15 +23,16 @@ public class BinaryTreeImplementation {
     //traversal
 
     //preOrder Traversal
-    public void preOrder(){
+    public void preOrder() {
         TreeNode curr = root;
         preOrder(curr);
     }
-    public void preOrder(TreeNode root){
-        if(root == null){     //base case
+
+    public void preOrder(TreeNode root) {
+        if (root == null) {     //base case
             return;
         }
-        System.out.println(root.data+ "  ");
+        System.out.println(root.data + "  ");
 
         //if a recursion is called more than once in that function,
         // it is called tree recursion.
@@ -41,12 +42,11 @@ public class BinaryTreeImplementation {
 
     /**
      * output:-
-     *                    call stack
+     * call stack
      * method call            line number           root
      * preOrder()                40                   5
-     *
      */
-    class TreeNode{
+    class TreeNode {
         private int data; //can be generic type.
         private TreeNode left;
         private TreeNode right;
